@@ -51,3 +51,14 @@ else
            exit 1; 
 
 fi
+
+while getopts ":f" opt; do
+  case $opt in
+    f)
+      echo "/Users/lihaybenshabat/Documents/DevOps/Week-2_passValid" >&2
+      ;;
+    \?)
+       echo "Invalid option: -$OPTARG" >&2
+      ;;
+  esac
+done
